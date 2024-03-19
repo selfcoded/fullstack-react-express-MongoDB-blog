@@ -1,0 +1,31 @@
+@use "../../utils/variables" as v;
+.header {
+  height: 100%;
+  width: 20%;
+  padding: nth($list: map-get($map: v.$margin, $key: m), $n: 2) 0;
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .item {
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px 10px 0;
+    .active {
+      background-color: map-get($map: v.$color, $key: color-gold);
+      color: map-get($map: v.$color, $key: text-color-dark);
+    }
+    a {
+      display: block;
+      padding: 10px 0;
+      border-radius: 0 10px 10px 0;
+      color: map-get($map: v.$color, $key: text-color-light);
+      font-family: map-get($map: v.$text-font-family, $key: header);
+      font-size: nth($list: v.$text-font-size, $n: 3);
+    }
+  }
+}

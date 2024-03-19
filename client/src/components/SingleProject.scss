@@ -1,0 +1,40 @@
+@use "../utils/variables" as v;
+.single-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: map-get($map: v.$color, $key: color-gold);
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 400px;
+  box-shadow: 10px 10px 1px 1px rgba(122, 122, 126, 0.2);
+  .upper-part {
+    flex-grow: 2;
+  }
+  .categories-container {
+    display: flex;
+    flex-direction: column;
+
+    .category-container {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .lower-part {
+    span {
+      line-height: 45px;
+    }
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-height: 45px;
+  }
+  button {
+    border-radius: 5px;
+    background-color: #0023493d;
+    a {
+      color: white;
+    }
+  }
+}

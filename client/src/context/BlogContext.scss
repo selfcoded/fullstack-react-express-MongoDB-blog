@@ -1,0 +1,24 @@
+@use "../utils/variables" as v;
+.blog-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  justify-content: space-evenly;
+}
+
+.blog-note-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  gap: 10px;
+  .single-container {
+    width: 100%;
+    min-height: fit-content;
+
+    .categories-container {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  }
+}

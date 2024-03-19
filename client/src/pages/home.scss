@@ -1,0 +1,31 @@
+@use "../utils/variables" as v;
+.home {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .welcome {
+      position: relative;
+      font-size: nth($list: v.$text-font-size, $n: 2);
+    }
+    color: white;
+    .welcome > .title,
+    .intro > .title,
+    .recent-projects-container > .title,
+    .experiences > .title {
+      display: block;
+      font-size: 30px;
+      line-height: 30px;
+      margin: nth($list: map-get($map: v.$margin, $key: s), $n: 1) 0;
+      text-align: right;
+      color: map-get($map: v.$color, $key: color-gold);
+      font-family: map-get($map: v.$text-font-family, $key: sub-header);
+    }
+    // p {
+    //   border-right: 4px solid map-get($map: v.$color, $key: color-gold);
+    // }
+  }
+}

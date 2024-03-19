@@ -1,0 +1,22 @@
+@use "sass:map";
+
+$text-colour: #2339c4;
+$color: (
+  "color-blue": #002349,
+  "color-gold": #957c3d,
+  "color-gray": #bbbbbc,
+  "color-white": #edebeb,
+  "text-color-dark": #002349,
+  "text-color-light": #edebeb,
+);
+$text-font-family: (
+  "header": Georgia Arial Helvetica sans-serif,
+  "para": Arial,
+  "sub-header": cursive,
+);
+$text-font-size: 10px 20px 25px 40px;
+$margin: (
+  "s": 10px 20px 30px,
+  "m": 40px 50px 60px,
+  "l": 70px 80px 90px,
+);

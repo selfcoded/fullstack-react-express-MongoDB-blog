@@ -1,0 +1,39 @@
+@use "../../utils/variables" as v;
+.category-container {
+  .category-title {
+    display: block;
+    width: 100px;
+    border: 2px solid #d7d9db96;
+    text-align: center;
+    padding: 5px;
+    text-transform: capitalize;
+    text-wrap: wrap;
+    color: #002349;
+  }
+  .sub-categories {
+    padding: 5px;
+    display: flex;
+    flex-grow: 2;
+    gap: 5px;
+    border: 2px solid #afb7ae69;
+    flex-direction: column;
+    .sub-category {
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+    word-break: break-all;
+
+    .items {
+      display: grid;
+      grid-auto-rows: max-content;
+      grid-auto-columns: max-content;
+      gap: 5px;
+      .item {
+        padding: 0 5px;
+        background-color: #e1c36c61;
+        border-radius: 5px;
+        color: map-get($map: v.$color, $key: text-color-dark);
+      }
+    }
+  }
+}

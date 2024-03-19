@@ -1,0 +1,55 @@
+@use "../utils/variables" as v;
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title {
+    text-transform: capitalize;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .input-item {
+      display: flex;
+      flex-direction: column;
+      min-width: 40%;
+      gap: 10px;
+      text-transform: capitalize;
+      input {
+        width: 100%;
+        height: 50px;
+      }
+    }
+  }
+
+  .text-input {
+    display: flex;
+    flex-direction: column;
+    min-width: 85%;
+    text-transform: capitalize;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  .error {
+    color: red;
+    text-transform: capitalize;
+  }
+  button {
+    width: 20%;
+    height: 40px;
+    margin-top: 30px;
+    &:hover {
+      background-color: map-get($map: v.$color, $key: color-gold);
+    }
+  }
+}
